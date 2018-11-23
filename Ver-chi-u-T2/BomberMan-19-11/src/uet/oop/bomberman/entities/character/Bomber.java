@@ -36,13 +36,6 @@ public class Bomber extends Character {
     Audios soundIcon = new Audios("icongame.wav", false);
     Audios soundPutBomb = new Audios("putBomb.wav", false);
     // bien su dung o ham afterKill.
-    int count = 0; 
-    Timer t = new Timer(1000, new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            count = 1; 
-        }
-    });
     
     public Bomber(int x, int y, Board board) {
         super(x, y, board);
@@ -166,15 +159,12 @@ public class Bomber extends Character {
             if (_board.getHeart() == 0) {
                 _board.endGame();
             } else {
-                t.start();
-                if (count == 1){
-                    _alive = true;
-                    _board.setHeart(-1);
-                    _x = 16; 
-                    _y = 32; 
-                    count = 0; 
-                    t.stop();
-                }
+                
+                _alive = true;
+                _board.setHeart(-1);
+                _x = 16; 
+                _y = 32; 
+                    
             }
         }
     }

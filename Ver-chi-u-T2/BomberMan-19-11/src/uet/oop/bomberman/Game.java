@@ -1,4 +1,4 @@
-package uet.oop.bomberman;
+ package uet.oop.bomberman;
 
 import developGame.Audios;
 import uet.oop.bomberman.graphics.Screen;
@@ -171,7 +171,7 @@ public class Game extends Canvas {
                                 _board.setShow(-1);
                                 _paused = false;
                             }
-                            else if(_screenDelay==3 && _board.getShow()!=1 && _board.getShow()!=2){
+                            else if(_screenDelay == 3 && _board.getShow()!=1 && _board.getShow()!=2){
                               _board.setShow(3);
                               _paused=true;
                             }
